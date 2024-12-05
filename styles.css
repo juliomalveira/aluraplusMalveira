@@ -1,0 +1,156 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167bf7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+}
+
+body {
+    background-color: var(--cor-de-fundo); /*cor do fundo*/
+    color: var(--branco-principal); /*cor da fonte*/
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;  /*zera todas as margens - lembrar de usar o "*" antes da chave */
+    padding: 0; /*zerar todos os preenchimentos*/
+}
+
+.principal {
+    background-image: url("img/Background.png"); /*foi utilizada essa essa tag devido ser img decorativa sem necessidade de texto*/
+    background-repeat: no-repeat; /*para não repetir a imagem*/
+    background-size: contain; /*preenche todo container*/
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh; /*altura da tela do dispositivo*/
+    display: grid; /*separa os elementos*/
+    grid-template-columns: 50% 50%; /*divide a tela em duas coljunas*/
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__botao {
+    background-color: var(--botao-azul); /*cor de fundo*/
+    border-radius: 5px; /* arredonda as bordas do botaõ*/
+    padding: 1em; /* espaco entre texto e borda */
+    color: var(--branco-principal); /*cor da fonte*/
+    display: block; /*ocupar o bloco inteiro*/
+    text-decoration: none; /*tirar o sublinhado do botao*/
+    margin-bottom: 1em; /*espaco entre os botoes*/
+}
+
+.botao__secundario {
+    background-color: transparent; /*pega todas propriedades do .container__botao e modifica só o necessário*/
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /*margens da imagem*/
+}
+
+.container__caixa {
+    margin: 0 6em;    
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block; /*alinhar o botao do lado esquerdo*/
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+    text-align: justify;
+}
+
+.dispositivos__lista {
+    display: flex; /*itens ficam ao lado do outro em linha igual ao grid*/
+    justify-content: center;  /*alinhou as imagens*/   
+    list-style-type: none; /*tira os asteriscos da lista*/
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center; /*alinha os textos*/
+}
+
+.dispositivos__titulo {
+    font-size: 48px; 
+    color: var(--branco-principal);  
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    font-size: 14px; 
+    color: var(--cinza-secundario); 
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
